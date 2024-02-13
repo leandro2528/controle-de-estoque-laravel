@@ -19,6 +19,7 @@
     </div>
     <div class="row  m-2">
         <div class="col-12">
+            @if(count($products))
             <table class="table table-hover table-striped">
                 <thead style="font-size: 14px;">
                     <tr>
@@ -58,6 +59,11 @@
                     @endforeach
                 </tbody>
             </table>
+            @else
+            <div class="alert alert-info">
+                Não á produtos cadastrados nesta tabela
+            </div>
+            @endif
         </div>
     </div>
 </div>
