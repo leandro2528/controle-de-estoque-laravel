@@ -12,4 +12,14 @@ class ProductController extends Controller
         $products = Product::orderBy('id', 'desc')->get();
         return view('products.index', ['products'=>$products]);
     }
+
+    public function create() {
+        $products = Product::all();
+        return view('products.create', ['products'=>$products]);
+    }
+
+    public function store(Request $request) {
+        Product::create($request->all());
+        return redirect()->route('products-index');
+    }
 }

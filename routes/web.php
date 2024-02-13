@@ -19,4 +19,7 @@ Route::get('/', [DashboardController::class, 'index'])->name('dashboards-index')
 
 Route::prefix('/products')->group(function() {
     Route::get('/', [ProductController::class, 'index'])->name('products-index');
+    Route::get('/create', [ProductController::class, 'create'])->name('products-create');
+    Route::post('/', [ProductController::class, 'store'])->name('products-store');
+   
 });
