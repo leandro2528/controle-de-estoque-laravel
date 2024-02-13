@@ -39,4 +39,9 @@ class ProductController extends Controller
         $products = Product::where('id', $id)->update($data);
         return redirect()->route('products-index');
     }
+
+    public function destroy($id) {
+        $products = Product::where('id', $id)->delete();
+        return redirect()->route('products-index');
+    } 
 }
