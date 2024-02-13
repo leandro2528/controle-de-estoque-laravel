@@ -22,4 +22,26 @@ class SupplierController extends Controller
         Supplier::create($request->all());
         return redirect()->route('suppliers-index');
     }
+
+    public function edit($id) {
+        $suppliers = Supplier::where('id', $id)->first();
+        return view('suppliers.edit', ['suppliers'=>$suppliers]);
+    }
+
+
+    public function update(Request $request, $id) {
+        $data = [
+            'nome' => $request->nome,
+            'endereco' => $request->endereco,
+            'telefone' => $request->telefone
+        ];
+
+        $suppliers = Supplier::where('id', $id)->update($data);
+        return redirect()->route('suppliers-index');
+    }
+
+    public function destroy($id) {
+        $suppliers = Supplier::where('id', $id)->delete();
+        return redirect()->route('suppliers-index');
+    }
 }

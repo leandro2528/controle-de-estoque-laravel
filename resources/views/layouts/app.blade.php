@@ -69,7 +69,7 @@
                             <div class="collapse" id="collapseSuppliers" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
                                 <nav class="sb-sidenav-menu-nested nav">
                                     <a class="nav-link" href="{{ route('suppliers-index') }}">Todos</a>
-                                    <a class="nav-link" href="">Cadastrar</a>
+                                    <a class="nav-link" href="{{ route('suppliers-create') }}">Cadastrar</a>
                                 </nav>
                             </div>
                         </div>

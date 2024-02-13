@@ -31,4 +31,7 @@ Route::prefix('/suppliers')->group(function() {
     Route::get('/', [SupplierController::class, 'index'])->name('suppliers-index');
     Route::get('/create', [SupplierController::class, 'create'])->name('suppliers-create');
     Route::post('/', [SupplierController::class, 'store'])->name('suppliers-store');
+    Route::get('/{id}/edit', [SupplierController::class, 'edit'])->where('id', '[0-9]+')->name('suppliers-edit');
+    Route::put('{id}', [SupplierController::class, 'update'])->where('id', '[0-9]+')->name('suppliers-update');
+    Route::delete('{id}', [SupplierController::class, 'destroy'])->where('id', '[0-9]+')->name('suppliers-destroy');
 });
