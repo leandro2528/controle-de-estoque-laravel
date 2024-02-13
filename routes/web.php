@@ -21,5 +21,6 @@ Route::prefix('/products')->group(function() {
     Route::get('/', [ProductController::class, 'index'])->name('products-index');
     Route::get('/create', [ProductController::class, 'create'])->name('products-create');
     Route::post('/', [ProductController::class, 'store'])->name('products-store');
-   
+    Route::get('/{id}/edit', [ProductController::class, 'edit'])->where('id', '[0-9]+')->name('products-edit');
+    Route::put('/{id}', [ProductController::class, 'update'])->where('id', '[0-9]+')->name('products-update');
 });
