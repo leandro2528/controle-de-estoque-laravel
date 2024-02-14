@@ -5,6 +5,8 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\SupplierController;
+use App\Http\Controllers\CategoryController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -34,4 +36,10 @@ Route::prefix('/suppliers')->group(function() {
     Route::get('/{id}/edit', [SupplierController::class, 'edit'])->where('id', '[0-9]+')->name('suppliers-edit');
     Route::put('{id}', [SupplierController::class, 'update'])->where('id', '[0-9]+')->name('suppliers-update');
     Route::delete('{id}', [SupplierController::class, 'destroy'])->where('id', '[0-9]+')->name('suppliers-destroy');
+});
+
+Route::prefix('/categorys')->group(function() {
+    Route::get('/', [CategoryController::class, 'index'])->name('categorys-index');
+    Route::get('/create', [CategoryController::class, 'create'])->name('categorys-create');
+    Route::post('/', [CategoryController::class, 'store'])->name('categorys-store');
 });
