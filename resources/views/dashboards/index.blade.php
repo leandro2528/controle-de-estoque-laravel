@@ -7,40 +7,48 @@
     <div class="row my-4">
         <div class="col-12">
                     <div class="container-fluid px-4">
-                        <h1 class="mt-4">Painel inícial</h1>
+                        <h3 class="mt-4">Painel inícial</h3>
                         <div class="row">
                             <div class="col-xl-3 col-md-6">
                                 <div class="card bg-primary text-white mb-4">
-                                    <div class="card-body">Primary Card</div>
+                                    <h5 class="card-body">Produto</h5>
                                     <div class="card-footer d-flex align-items-center justify-content-between">
-                                        <a class="small text-white stretched-link" href="#">View Details</a>
+                                        <a class="small text-white stretched-link text-decoration-none" href="{{ route('products-index') }}">
+                                            <h5>0{{ $totalProducts }}</h5>
+                                        </a>
                                         <div class="small text-white"><i class="fas fa-angle-right"></i></div>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-xl-3 col-md-6">
                                 <div class="card bg-warning text-white mb-4">
-                                    <div class="card-body">Warning Card</div>
+                                <h5 class="card-body">Fornecedores</h5>
                                     <div class="card-footer d-flex align-items-center justify-content-between">
-                                        <a class="small text-white stretched-link" href="#">View Details</a>
+                                        <a class="small text-white stretched-link text-decoration-none" href="{{ route('suppliers-index') }}">
+                                        <h5>0{{ $totalSuppliers }}</h5>
+                                        </a>
                                         <div class="small text-white"><i class="fas fa-angle-right"></i></div>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-xl-3 col-md-6">
                                 <div class="card bg-success text-white mb-4">
-                                    <div class="card-body">Success Card</div>
+                                <h5 class="card-body">Compras</h5>
                                     <div class="card-footer d-flex align-items-center justify-content-between">
-                                        <a class="small text-white stretched-link" href="#">View Details</a>
+                                        <a class="small text-white stretched-link text-decoration-none" href="{{ route('purchases-index') }}">
+                                        <h5>0{{ $totalPurchases }}</h5>
+                                        </a>
                                         <div class="small text-white"><i class="fas fa-angle-right"></i></div>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-xl-3 col-md-6">
                                 <div class="card bg-danger text-white mb-4">
-                                    <div class="card-body">Danger Card</div>
+                                <h5 class="card-body">Vendas</h5>
                                     <div class="card-footer d-flex align-items-center justify-content-between">
-                                        <a class="small text-white stretched-link" href="#">View Details</a>
+                                        <a class="small text-white stretched-link text-decoration-none" href="{{ route('sales-index') }}">
+                                        <h5>0{{ $totalSales }}</h5>
+                                        </a>
                                         <div class="small text-white"><i class="fas fa-angle-right"></i></div>
                                     </div>
                                 </div>

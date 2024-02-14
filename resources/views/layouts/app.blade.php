@@ -46,7 +46,7 @@
                             
                             <a class="nav-link" href="{{ route('dashboards-index') }}">
                                 <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
-                                Dashboard
+                                Controle de Estoque
                             </a>
                             <div class="sb-sidenav-menu-heading">Menu Navegação</div>
                             <a class="nav-link collapsed mt-3" href="#" data-bs-toggle="collapse" data-bs-target="#collapseProducts" aria-expanded="false" aria-controls="collapseLayouts">
