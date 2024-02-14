@@ -16,4 +16,18 @@ class PurchaseController extends Controller
         $suppliers = Supplier::all();
         return view('purchases.index', ['purchases'=>$purchases, 'products'=>$products, 'suppliers'=>$suppliers]);
     }
+
+    public function create() {
+        $purchases = Purchase::all();
+        $products = Product::all();
+        $suppliers = Supplier::all();
+        return view('purchases.create', ['purchases'=>$purchases, 'products'=>$products, 'suppliers'=>$suppliers]);
+    }
+
+    public function store(Request $request) {
+        Purchase::create($request->all());
+        $products = Product::all();
+        $suppliers = Supplier::all();
+        return redirect()->route('purchases-index');
+    }
 }

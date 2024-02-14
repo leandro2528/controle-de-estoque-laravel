@@ -50,4 +50,6 @@ Route::prefix('/categorys')->group(function() {
 
 Route::prefix('/purchases')->group(function() {
     Route::get('/', [PurchaseController::class, 'index'])->name('purchases-index');
+    Route::get('/create', [PurchaseController::class, 'create'])->name('purchases-create');
+    Route::post('/', [PurchaseController::class, 'store'])->name('purchases-store');
 });
