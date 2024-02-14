@@ -6,6 +6,7 @@ use App\Http\Controllers\ProductController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\SupplierController;
 use App\Http\Controllers\CategoryController;
+use App\Http\Controllers\PurchaseController;
 
 /*
 |--------------------------------------------------------------------------
@@ -45,4 +46,8 @@ Route::prefix('/categorys')->group(function() {
     Route::get('{id}/edit', [CategoryController::class, 'edit'])->where('id', '[0-9]+')->name('categorys-edit');
     Route::put('{id}', [CategoryController::class, 'update'])->where('id', '[0-9]+')->name('categorys-update');
     Route::delete('{id}', [CategoryController::class, 'destroy'])->where('id', '[0-9]+')->name('categorys-destroy');
+});
+
+Route::prefix('/purchases')->group(function() {
+    Route::get('/', [PurchaseController::class, 'index'])->name('purchases-index');
 });
