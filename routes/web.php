@@ -42,4 +42,7 @@ Route::prefix('/categorys')->group(function() {
     Route::get('/', [CategoryController::class, 'index'])->name('categorys-index');
     Route::get('/create', [CategoryController::class, 'create'])->name('categorys-create');
     Route::post('/', [CategoryController::class, 'store'])->name('categorys-store');
+    Route::get('{id}/edit', [CategoryController::class, 'edit'])->where('id', '[0-9]+')->name('categorys-edit');
+    Route::put('{id}', [CategoryController::class, 'update'])->where('id', '[0-9]+')->name('categorys-update');
+    Route::delete('{id}', [CategoryController::class, 'destroy'])->where('id', '[0-9]+')->name('categorys-destroy');
 });

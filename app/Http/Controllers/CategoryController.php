@@ -22,4 +22,23 @@ class CategoryController extends Controller
         Category::create($request->all());
         return redirect()->route('categorys-index');
     }
+
+    public function edit($id) {
+        $categorys = Category::where('id', $id)->first();
+        return view('categorys.edit', ['categorys'=>$categorys]);
+    }
+
+    public function update(Request $request, $id) {
+        $data = [
+            'nome' => $request->nome
+        ];
+
+        $categortys = Category::where('id', $id)->update($data);
+        return redirect()->route('categorys-index');
+    }
+
+    public function destroy($id) {
+        $categorys = Category::where('id', $id)->delete();
+        return redirect()->route('categorys-index');
+    }
 }
