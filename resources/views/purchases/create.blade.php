@@ -22,7 +22,7 @@
                 @csrf
                 <div class="form-group my-3">
                     <label for="">Produto</label>
-                    <select class="form-select" name="product_id" id="product_id">
+                    <select class="form-select" name="product_id" id="product_id" required>
                         <option value="select">-- Selecione um produto --</option>
                         @foreach($products as $product)
                             <option value="{{ $product->id }}">{{ $product->nome }}</option>
@@ -31,19 +31,19 @@
                 </div>
                 <div class="form-group my-3">
                     <label for="">Quantidade</label>
-                    <input type="text" class="form-control" name="quantidade">
+                    <input type="text" class="form-control" name="quantidade" required>
                 </div>
                 <div class="form-group my-3">
                     <label for="">Preco Unitário</label>
-                    <input type="text" class="form-control" name="preco_unitario">
+                    <input type="text" class="form-control" name="preco_unitario" required>
                 </div>
                 <div class="form-group my-3">
                     <label for="">Data da Compra</label>
-                    <input type="date" class="form-control" name="data_compra">
+                    <input type="date" class="form-control" name="data_compra" required>
                 </div>
                 <div class="form-group my-3">
                     <label for="">Fornecedor</label>
-                    <select class="form-select" name="supplier_id" id="supplier_id">
+                    <select class="form-select" name="supplier_id" id="supplier_id" required>
                         <option value="select">-- Selecione um fornecedor --</option>
                         @foreach($suppliers as $supplier)
                             <option value="{{ $supplier->id }}">{{ $supplier->nome }}</option>

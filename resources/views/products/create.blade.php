@@ -22,19 +22,19 @@
                 @csrf
                 <div class="form-group my-3">
                     <label for="">Nome</label>
-                    <input type="text" class="form-control" required name="nome">
+                    <input type="text" class="form-control" name="nome" required>
                 </div>
                 <div class="form-group my-3">
                     <label for="">Descrição</label>
-                    <input type="text" class="form-control" required name="descricao">
+                    <input type="text" class="form-control" name="descricao" required>
                 </div>
                 <div class="form-group my-3">
                     <label for="">Quantidade</label>
-                    <input type="number" class="form-control" required name="quantidade">
+                    <input type="number" class="form-control" name="quantidade" required>
                 </div>
                 <div class="form-group my-3">
                     <label for="">Valor</label>
-                    <input type="text" class="form-control" required name="valor">
+                    <input type="text" class="form-control" name="valor" required>
                 </div>
                 <div class="form-group my-3">
                     <input type="submit" class="btn btn-primary btn-sm" value="Cadastrar">

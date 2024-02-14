@@ -22,7 +22,7 @@
                 @csrf
                 <div class="form-group my-3">
                     <label for="">Produto</label>
-                    <select class="form-select" name="product_id" id="product_id">
+                    <select class="form-select" name="product_id" id="product_id" required>
                         <option value="select">-- Selecione o produto --</option>
                         @foreach($products as $product)
                             <option value="{{ $product->id }}">{{ $product->nome }}</option>
@@ -31,15 +31,15 @@
                 </div>
                 <div class="form-group my-3">
                     <label for="">Quantidade</label>
-                    <input type="text" class="form-control" name="quantidade">
+                    <input type="text" class="form-control" name="quantidade" required>
                 </div>
                 <div class="form-group my-3">
                     <label for="">Valor</label>
-                    <input type="text" class="form-control" name="valor">
+                    <input type="text" class="form-control" name="valor" required>
                 </div>
                 <div class="form-group my-3">
                     <label for="">Data de Venda</label>
-                    <input type="date" class="form-control" name="data_venda">
+                    <input type="date" class="form-control" name="data_venda" required>
                 </div><div class="form-group my-3">
                     <input type="submit" class="btn btn-primary btn-sm" value="Cadastrar Venda">
                 </div>

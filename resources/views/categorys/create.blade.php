@@ -20,7 +20,7 @@
                 @csrf
                 <div class="form-group my-3">
                     <label for="">Nome</label>
-                    <input type="text" class="form-control" name="nome">
+                    <input type="text" class="form-control" name="nome" required>
                 </div>
 
                 <div class="form-group my-3">

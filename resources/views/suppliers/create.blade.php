@@ -19,21 +19,21 @@
     <div class="row  m-2">
         <div class="col-12">
            
-            <form action="{{ route('suppliers-store') }}" method="POST">
+            <form action="{{ route('suppliers-store') }}" method="POST" required>
                 @csrf
                 <div class="form-group my-3">
                     <label for="">Nome</label>
-                    <input type="text" class="form-control" name="nome">
+                    <input type="text" class="form-control" name="nome" required>
                 </div>
 
                 <div class="form-group my-3">
                     <label for="">Endereço</label>
-                    <input type="text" class="form-control" name="endereco">
+                    <input type="text" class="form-control" name="endereco" required>
                 </div>
 
                 <div class="form-group my-3">
                     <label for="">Telefone</label>
-                    <input type="text" class="form-control" name="telefone">
+                    <input type="text" class="form-control" name="telefone" required>
                 </div>
 
                 <div class="form-group my-3">
