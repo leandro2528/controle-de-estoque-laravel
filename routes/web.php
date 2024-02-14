@@ -7,6 +7,7 @@ use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\SupplierController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\PurchaseController;
+use App\Http\Controllers\SaleController;
 
 /*
 |--------------------------------------------------------------------------
@@ -52,4 +53,10 @@ Route::prefix('/purchases')->group(function() {
     Route::get('/', [PurchaseController::class, 'index'])->name('purchases-index');
     Route::get('/create', [PurchaseController::class, 'create'])->name('purchases-create');
     Route::post('/', [PurchaseController::class, 'store'])->name('purchases-store');
+});
+
+Route::prefix('/sales')->group(function() {
+    Route::get('/', [SaleController::class, 'index'])->name('sales-index');
+    Route::get('/create', [SaleController::class, 'create'])->name('sales-create');
+    Route::post('/', [SaleController::class, 'store'])->name('sales-store');
 });
