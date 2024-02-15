@@ -30,6 +30,7 @@ class ProductController extends Controller
 
     public function update(Request $request, $id) {
         $data = [
+            'foto' =>$request->foto,
             'nome' => $request->nome,
             'descricao' => $request->descricao,
             'quantidade' => $request->quantidade,

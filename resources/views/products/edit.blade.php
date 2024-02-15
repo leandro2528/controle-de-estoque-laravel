@@ -22,6 +22,10 @@
                 @csrf
                 @method('put')
                 <div class="form-group my-3">
+                    <label for="">Foto</label>
+                    <input type="text" class="form-control" value="{{ $products->foto }}" name="foto">
+                </div>
+                <div class="form-group my-3">
                     <label for="">Nome</label>
                     <input type="text" class="form-control" value="{{ $products->nome }}" name="nome">
                 </div>
