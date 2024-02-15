@@ -14,12 +14,12 @@ return new class extends Migration
         Schema::create('purchases', function (Blueprint $table) {
             $table->id();
             $table->unsignedBigInteger('product_id');
-            $table->foreign('product_id')->references('id')->on('products');
+            $table->foreign('product_id')->references('id')->on('products')->onDelete('cascade')->onUpdate('cascade');
             $table->integer('quantidade');
             $table->double('preco_unitario');
             $table->date('data_compra');
             $table->unsignedBigInteger('supplier_id');
-            $table->foreign('supplier_id')->references('id')->on('suppliers');
+            $table->foreign('supplier_id')->references('id')->on('suppliers')->onDelete('cascade')->onUpdate('cascade');
             $table->timestamps();
         });
     }
