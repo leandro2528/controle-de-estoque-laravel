@@ -59,25 +59,52 @@
                                 <div class="card mb-4">
                                     <div class="card-header">
                                         <i class="fas fa-chart-area me-1"></i>
-                                        Area Chart Example
+                                       Vendas
                                     </div>
-                                    <div class="card-body"><canvas id="myAreaChart" width="100%" height="40"></canvas></div>
+                                    <div class="card-body">
+                                        @if(count($products))
+                                        <table class="table table-bordered">
+                                            <thead style="font-size: 12px; color: #666;">
+                                                <tr>
+                                                    <th>Produto</th>
+                                                    <th>Quantidade</th>
+                                                    <th>Valor</th>
+                                                    <th>Data da Venda</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody style="font-size: 12px;">
+                                                @foreach($products as $product )
+                                                <tr>
+                                                    <td>{{ $product->produto }}</td>
+                                                    <td>{{ $product->quantidade }}</td>
+                                                    <td>{{ $product->valor }}</td>
+                                                    <td>{{ $product->data_venda }}</td>
+                                                </tr>
+                                                @endforeach
+                                            </tbody>
+                                        </table>
+                                        @else 
+                                        <div class="alert alert-info">
+                                            <p>Não á vendas nessa tabela</p>
+                                        </div>
+                                        @endif
+                                    </div>
                                 </div>
                             </div>
                             <div class="col-xl-6">
                                 <div class="card mb-4">
                                     <div class="card-header">
                                         <i class="fas fa-chart-bar me-1"></i>
-                                        Bar Chart Example
+                                       Compras
                                     </div>
-                                    <div class="card-body"><canvas id="myBarChart" width="100%" height="40"></canvas></div>
+                                    <div class="card-body"></div>
                                 </div>
                             </div>
                         </div>
                         <div class="card mb-4">
                             <div class="card-header">
                                 <i class="fas fa-table me-1"></i>
-                                DataTable Example
+                                Mais vendidos
                             </div>
                             <div class="card-body">
                                 <table id="datatablesSimple">
